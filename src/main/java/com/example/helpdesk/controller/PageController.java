@@ -16,7 +16,8 @@ public class PageController {
         model.addAttribute("features", List.of(
                 "Регистрация обращений",
                 "Приоритизация задач",
-                "Контакты поддержки"
+                "Контакты поддержки",
+                "База знаний"
         ));
         return "index";
     }

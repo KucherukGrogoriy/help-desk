@@ -15,6 +15,7 @@
         <a class="navbar-brand fw-bold" th:href="@{/}">Help Desk</a>
         <div class="navbar-nav">
             <a class="nav-link" th:href="@{/}">Главная</a>
+            <a class="nav-link" th:href="@{/tickets}">Заявки</a>
             <a class="nav-link" th:href="@{/about}">О нас</a>
             <a class="nav-link active" th:href="@{/contacts}">Контакты</a>
         </div>
@@ -44,6 +45,20 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+
+    <div class="card mt-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3 class="h5 mb-0">Что указать в обращении</h3>
+        </div>
+        <div class="card-body">
+            <ul class="mb-0">
+                <li>Краткое описание проблемы</li>
+                <li>Номер заявки (если уже есть)</li>
+                <li>Скриншот ошибки (если возможно)</li>
+                <li>Контактные данные для связи</li>
+            </ul>
         </div>
     </div>
 
