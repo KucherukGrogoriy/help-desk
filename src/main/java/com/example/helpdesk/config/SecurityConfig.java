@@ -22,7 +22,7 @@ public class SecurityConfig {
                         .requestMatchers(PathRequest.toH2Console()).permitAll()
 
                         .requestMatchers(HttpMethod.GET,
-                                "/", "/about", "/contacts", "/login",
+                                "/", "/about", "/contacts", "/login", "/access-denied",
                                 "/tickets/new", "/tickets/*/success"
                         ).permitAll()
                         .requestMatchers(HttpMethod.POST, "/tickets").permitAll()
@@ -30,9 +30,11 @@ public class SecurityConfig {
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
+
                 .exceptionHandling(exception -> exception
                         .accessDeniedPage("/access-denied")
                 )
+
                 .csrf(csrf -> csrf
                         .ignoringRequestMatchers(PathRequest.toH2Console())
                 )
